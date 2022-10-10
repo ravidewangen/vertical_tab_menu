@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background: #4b4b4b; */
+    transition: 0.5s;
+}
+
+.navigation{
+    position: relative;
+    width: 70px;
+    height: 350px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: rgba(0,0,0,0.1) 0px 15px 24px;
+}
+
+.navigation ul li {
+    position: relative;
+    list-style: none;
+    width: 70px;
+    height: 70px;
+    z-index: 1;
+}
+
+.navigation ul li a {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    text-decoration: none;
+    text-align: center;
+    font-weight: 500;
+    color: #4b4b4b;
+}
+
+.navigation ul li a .icon{
+    position: relative;
+    display: block;
+    line-height: 75px;
+    text-align: center;
+
+}
+
+.navigation ul li.active a .icon{
+    color:#fff;
+}
+
+
+.navigation ul li a .icon i{
+    font-size: 24px;
+}
+
+.navigation ul li a .title{
+    position: absolute;
+    top: 50%;
+    left: 110px;
+    background: #fff;
+    transform: translateY(-50%);
+    border-radius: 6px;
+    padding: 5px 10px ;
+    transition: 0.5s;
+    box-shadow: 0px 5px 15px rgba(0,0,0,0.1);
+    opacity: 0;
+    visibility: hidden;
+}
+.navigation ul li:hover a .title{
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-25px) translateY(-50%);
+}
+
+.navigation ul li a .title::before{
+    content: '';
+    position: absolute;
+    left: -10px;
+    top: 46%;
+    transform: rotate(45deg) translateY(-50%);
+    width: 12px;
+    height: 12px;
+    background: #fff;
+    border-radius: 2px;
+}
+
+.active-tab{
+    position: absolute;
+    left: 50%;
+    /* top: 8px; */
+    transform: translateX(-50%);
+    width: 50px;
+    height: 50px;
+    /* background: #4b4b4b; */
+    border-radius: 8px;
+    transition: 0.5s;
+}
+
